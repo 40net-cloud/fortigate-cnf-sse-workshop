@@ -171,7 +171,7 @@ resource "aws_route_table" "internal" {
 data "aws_vpc_endpoint" "gwlbendpointcnf" {
   count = var.CNF-ENDPOINT == "" ? 0 : 1
   tags = {
-    "ManagedBy" : "fwaas"
+    "ManagedBy" : "FortiGate CNF"
     "Name" : var.CNF-ENDPOINT
   }
 }
